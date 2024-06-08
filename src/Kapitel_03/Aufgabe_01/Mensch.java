@@ -1,35 +1,57 @@
 package Kapitel_03.Aufgabe_01;
 
 public class Mensch implements Comparable<Mensch> {
-
-    private int _iHeight;
     private String _sName;
+    private int _iHeight;
 
-    public Mensch(int iHeight, String sName) {
-        this._iHeight = iHeight;
+    /**
+     * Konstruktor
+     *
+     * @param sName     Name für den Menschen
+     * @param iHeight   Größe des Menschen in cm
+     */
+    public Mensch(String sName, int iHeight) {
         this._sName = sName;
+        this._iHeight = iHeight;
     }
-
-    @Override
-    public int compareTo(Mensch oMensch) {
-        return this.getHeight() - oMensch.getHeight();
+    
+    /**
+     * Getter für _sName
+     *
+     * @return      Name des Menschen
+     */
+    public String getName(){
+        return this._sName;
     }
 
     /**
      * Getter für _iHeight
-     * 
-     * @return
+     *
+     * @return      Größe des Menschen
      */
-    public int getHeight() {
+    public int getHeight(){
         return this._iHeight;
     }
 
     /**
-     * Rückgabe des Komperators zum Vergleich des Objektes anhand eines Key-Values
-     * 
-     * @return
+     * Referenzbeschreibung/-bezeichnung zurückgeben
+     *
+     * @return      String, welches das Objekt beschreibt
      */
-    public Comperator<Integer, Mensch> getComperator() {
-        return (key, element) -> key.equals(element._iHeight);
+    @Override
+    public String toString() {
+        return String.format("%s ist %d cm groß", this.getName(), this.getHeight());
+    }
+
+    /**
+     * Vergleicht die Körpergröße von der aktuellen Mensch-Referenz mit der
+     * übergebenen Mensch-Referenz
+     *
+     * @param o     the object to be compared.
+     * @return      Gibt zurück, welcher der Mensch-Referenzen größer ist
+     */
+    @Override
+    public int compareTo(Mensch o) {
+        return this.getHeight() - o.getHeight();
     }
 }

@@ -34,7 +34,7 @@ public class Eratostenes {
      * 3. Wenn der Wert im Index i != 0 ist == Primzahl
      * 4. Innere Schleife startet ab i² und iteriert um ein i jeweils weiter und 
      *    streicht die nicht Primzahlen raus
-     * 5. Die letzte Schleife gibt aus ob es sich beim Index (repräsentat für die aktuelle Zahl)
+     * 5. Die letzte Schleife gibt, aus ob es sich beim Index (repräsentat für die aktuelle Zahl)
      *    um eine Primzahl handelt oder nicht
      * 
      * @param arr
