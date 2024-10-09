@@ -1,6 +1,6 @@
 package Pruefungsvorbereitung.Kapitel_03.Aufgabe_01;
 
-public class ListWithoutHeader<t extends Comparable<? super t>> extends List<t> {
+public class ListWithoutHeader<T extends Comparable<? super T>> extends List<T> {
     public ListWithoutHeader() {
         this.head = new Node();
     }

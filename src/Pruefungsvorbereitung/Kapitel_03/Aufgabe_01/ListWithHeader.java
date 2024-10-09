@@ -1,6 +1,6 @@
 package Pruefungsvorbereitung.Kapitel_03.Aufgabe_01;
 
-public class ListWithHeader<t extends Comparable<? super t>> extends List<t> {
+public class ListWithHeader<T extends Comparable<? super T>> extends List<T> {
 
     @Override
     public void insert(T data) {
